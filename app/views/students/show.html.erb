@@ -1,14 +1,19 @@
+
 <p id="notice"><%= notice %></p>
+<div class="card pl-3 pt-2 pb-2">
+  <p>
+    <strong>Nombre:</strong>
+    <%= @student.name %>
+  </p>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
+<div class="card pl-3 pt-2 pb-2">
+  <p>
+    <strong>Edad:</strong>
+    <%= @student.age %>
+  </p>
+</div>
 
-<p>
-  <strong>Age:</strong>
-  <%= @student.age %>
-</p>
+<%= link_to 'Editar', edit_student_path(@student), class: 'btn btn-success' %>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Salir', students_path, class: 'btn btn-success' %>
